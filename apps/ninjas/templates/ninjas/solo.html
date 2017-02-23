@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>solo</title>
+  </head>
+  <body>
+    {% load staticfiles %}
+    {% if color == "blue" %}
+    <img src="../static/imgs/leo.jpg" width="500" height="400">
+    {% endif%}
+    {% if color == "red" %}
+    <img src="{% static 'imgs/Ralph.jpg'%}" width="500" height="400">
+    {% endif%}
+    {% if color == "purple" %}
+    <img src="{% static 'imgs/don.jpg'%}" width="500" height="400">
+    {% endif%}
+    {% if color == "orange" %}
+    <img src="{% static 'imgs/mikey.jpg'%}" width="500" height="400">
+    {% endif%}
+    {% if color != "blue" and color != "red" and color != "orange" and color != "purple" %}
+    <img src="{% static 'imgs/april.jpg'%}" width="500" height="400">
+    {% endif%}
+  </body>
+</html>

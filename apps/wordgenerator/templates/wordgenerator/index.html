@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    random word ( attempt #{{request.session.count}})<br>
+    <textarea name="name" rows="8" cols="40">{{request.session.randomnum}}</textarea>
+    <form  action="/process" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="generate">
+    </form>
+  </body>
+</html>

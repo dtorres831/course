@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>delete</title>
+  </head>
+  <body>
+    <h1>Are you sure you want to delete this class?</h1>
+    {% for class in dclasses %}
+      Name: {{class.title}}<br>
+      Description: {{class.description}}<br>
+
+    <form  action="/" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="no">
+    </form>
+    <form action="/course/delete/remove/{{class.id}}" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="delete">
+    {% endfor%}
+    </form>
+  </body>
+</html>

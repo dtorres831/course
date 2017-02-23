@@ -1,0 +1,17 @@
+. body{
+  text-align: center;
+}
+#top{
+  height: 20px;
+  width: 200px;
+  border-style: groove;
+  text-align: center;
+  margin-left: 120px;
+}
+
+#main {
+  height: 75px;
+  width: 500px;
+  border-style: groove;
+  text-align: center;
+}
